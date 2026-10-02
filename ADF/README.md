@@ -327,38 +327,6 @@ Useful information for an operational notification includes:
 - Error information
 
 ---
-
-# 🔐 Security
-
-Credentials and secrets should **not** be hardcoded inside pipeline definitions.
-
-Recommended pattern:
-
-```text
-Azure Key Vault
-       │
-       ▼
-ADF Linked Service
-       │
-       ▼
-Pipeline
-       │
-       ▼
-Source / Target
-```
-
-When publishing this repository publicly, remove or parameterize:
-
-- Passwords
-- API keys
-- Connection strings
-- Access keys
-- SAS tokens
-- Webhook secrets
-- Subscription-specific secrets
-
----
-
 # 📊 Example End-to-End Retail Data Integration
 
 One of the implementations documented in this Azure Data Engineering work is a **Retail Data Integration Platform**.
@@ -465,49 +433,6 @@ This folder is intended to demonstrate practical knowledge of:
 - Row-count validation
 
 ---
-
-# 📁 Recommended Folder Structure
-
-For a clean GitHub organization, the ADF directory can follow this structure:
-
-```text
-ADF/
-│
-├── README.md
-│
-├── Pipelines/
-│   ├── PL_00_Master_Orchestrator.json
-│   ├── PL_01_Ingest_RawZone.json
-│   ├── PL_02_Transform_ProcessedZone.json
-│   └── PL_03_Load_CuratedZone.json
-│
-├── Dataflows/
-│   └── DF_CleanAndJoin.json
-│
-├── Datasets/
-│   └── ...
-│
-├── LinkedServices/
-│   └── ...
-│
-├── Triggers/
-│   └── ...
-│
-├── SQL/
-│   ├── Tables/
-│   ├── StoredProcedures/
-│   └── ValidationQueries/
-│
-└── Documentation/
-    ├── Architecture/
-    ├── Screenshots/
-    └── ProjectGuides/
-```
-
-This type of separation is also commonly used in public ADF repositories to keep pipelines, datasets, dataflows, linked services, triggers and documentation organized. citeturn0search11turn0search8
-
----
-
 # 🚀 How to Use This Folder
 
 ## Step 1 — Open Azure Data Factory
@@ -565,28 +490,6 @@ Activity Runs
 Review successful and failed activities.
 
 ---
-
-# 🧪 Testing Checklist
-
-Before considering a pipeline complete, verify:
-
-- [ ] Source connection works
-- [ ] Target connection works
-- [ ] Dataset paths are correct
-- [ ] Pipeline parameters are populated
-- [ ] Copy activity succeeds
-- [ ] Data Flow succeeds
-- [ ] Incremental logic returns the expected records
-- [ ] Watermark is updated after successful ingestion
-- [ ] Duplicate records are handled
-- [ ] Row-count validation passes
-- [ ] Failure path works
-- [ ] Trigger executes correctly
-- [ ] Pipeline run appears in Monitor
-- [ ] No secrets are committed to GitHub
-
----
-
 # 📚 Learning Outcomes
 
 This ADF folder demonstrates practical experience with:
@@ -596,26 +499,6 @@ This ADF folder demonstrates practical experience with:
 It is intended as a portfolio/reference collection for Azure Data Engineering work.
 
 ---
-
-# 🔒 Security Notice
-
-This repository should contain **configuration and implementation examples, not secrets**.
-
-Never commit:
-
-```text
-passwords
-API keys
-access keys
-SAS tokens
-client secrets
-private keys
-database connection strings containing credentials
-webhook secrets
-```
-
-Use Azure Key Vault, Managed Identity or secure parameterization where appropriate.
-
 ## ⭐ Summary
 
 This ADF folder demonstrates how **Azure Data Factory can be used to build reusable data integration pipelines**, from source ingestion through transformation, orchestration, validation and monitoring.
