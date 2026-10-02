@@ -557,50 +557,6 @@ confirming the complete Bronze → Silver → Gold workflow. fileciteturn2
 | Power BI | Intended reporting/consumption layer |
 
 ---
-
-# 📁 Suggested GitHub Repository Structure
-
-```text
-Retail-Data-Integration-Platform/
-│
-├── README.md
-│
-├── adf/
-│   ├── pipelines/
-│   │   ├── PL_00_Master_Orchestrator.json
-│   │   ├── PL_01_Ingest_RawZone.json
-│   │   ├── PL_02_Transform_ProcessedZone.json
-│   │   └── PL_03_Load_CuratedZone.json
-│   │
-│   ├── dataflows/
-│   │   └── DF_CleanAndJoin.json
-│   │
-│   ├── datasets/
-│   │   └── ...
-│   │
-│   ├── linkedServices/
-│   │   └── ...
-│   │
-│   └── triggers/
-│       └── ...
-│
-├── sql/
-│   ├── create_tables.sql
-│   ├── watermark_procedure.sql
-│   └── validation_queries.sql
-│
-├── docs/
-│   ├── Retail_Data_Integration_Platform_ADF_Build.pdf
-│   └── BRD_Retail_Data_Integration_ADF.docx
-│
-└── screenshots/
-    └── ...
-```
-
-> **Note:** Do not commit passwords, connection strings, API keys, webhook secrets or other credentials to GitHub.
-
----
-
 # 🚀 How the Pipeline Works
 
 The complete process can be summarized as:
