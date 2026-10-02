@@ -399,49 +399,6 @@ The Catalog provides a structured way to discover and access the data assets rat
 | **AdventureWorks Dataset** | Sample retail/business data |
 
 ---
-
-## 📂 Suggested Repository Structure
-
-```text
-Azure_Data_Engineering/
-│
-├── Databricks/
-│   ├── Notebooks/
-│   │   └── AdventureWorks_Data_Engineering.py
-│   │
-│   ├── README.md
-│   └── Screenshots/
-│
-├── ADLS/
-│   ├── Bronze/
-│   ├── Silver/
-│   └── Gold/
-│
-├── Documentation/
-│   └── Azure_Databricks_ADLS_Medallion_Step_by_Step_Guide.pdf
-│
-└── README.md
-```
-
-Adjust the filenames and folder names above to match the actual repository structure.
-
----
-
-## 🔐 Security Considerations
-
-The demonstration screenshot for Databricks storage access contains credential configuration.
-
-For a production implementation:
-
-- Do **not** commit storage account keys or passwords to GitHub.
-- Store secrets in **Azure Key Vault** or an approved secrets manager.
-- Use **Databricks secret scopes** where appropriate.
-- Prefer **Managed Identity / service principals** where supported.
-- Use environment-specific configuration for Dev, Test, and Production.
-- Review notebooks and screenshots before publishing them publicly.
-
----
-
 ## 📸 Documentation
 
 A detailed screenshot-based implementation guide is included with this project.
