@@ -707,7 +707,7 @@ The final curated dataset contained **62 business-ready rows** during the docume
 The repository can include the detailed implementation document:
 
 - `Retail_Data_Integration_Platform_ADF_Build.pdf` — step-by-step ADF build and validation documentation.
-- `BRD_Retail_Data_Integration_ADF.docx` — business requirements and solution design documentation.
+
 
 The BRD defines the project as an Azure Data Factory-only implementation and describes the Bronze/Silver/Gold architecture, metadata-driven ingestion, incremental loading, curated Sales Summary and reporting objectives. fileciteturn1file1
 
@@ -717,7 +717,7 @@ The BRD defines the project as an Azure Data Factory-only implementation and des
 
 **Retail Data Integration Platform** is a complete Azure Data Factory data engineering project that demonstrates how multiple heterogeneous retail data sources can be integrated, transformed, validated and delivered as a curated dataset for analytics.
 
-**SQL + REST API + CSV → ADF → Bronze → Silver → Gold/Azure SQL → Power BI**
+**SQL + REST API + CSV → ADF → Bronze → Silver → Gold/Azure SQL**
 
 ---
 
