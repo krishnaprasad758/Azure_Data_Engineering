@@ -538,40 +538,6 @@ The documented steps include:
 The guide specifically documents the consolidation of the three yearly Sales files into a single dataset using `unionByName`.
 
 ---
-
-# 🔒 Security Guidelines
-
-Before pushing Databricks notebooks or screenshots to a public GitHub repository:
-
-### Never commit
-
-```text
-Storage Account Keys
-Client Secrets
-Passwords
-Access Tokens
-Connection Strings containing secrets
-```
-
-### Recommended approach
-
-```text
-Azure Key Vault
-       │
-       ▼
-Secure Secret / Identity
-       │
-       ▼
-Azure Databricks
-       │
-       ▼
-ADLS Gen2
-```
-
-The project documentation also identifies credential configuration in the demonstrated notebook and recommends using Key Vault / Databricks secret management rather than hard-coded credentials.
-
----
-
 # 🎓 Key Data Engineering Concepts
 
 This project provides practical exposure to:
